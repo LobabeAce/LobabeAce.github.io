@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.screen {
+  position: relative;
+  width: 360px;
+  height: 640px;
+  background: url("bg.png") no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* --- Верхняя панель --- */
+.topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.icon-btn {
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: url("icons.png") no-repeat;
+  background-size: 240px 48px; /* 5 кнопок по 48px */
+  cursor: pointer;
+  border-radius: 8px;
+  opacity: 0.95;
+}
+
+.icon-btn:active {
+  transform: scale(0.95);
+}
+
+/* позиции по sprite (1 картинка) */
+.icon-btn.shop   { background-position:   0px 0px; }
+.icon-btn.hero   { background-position: -48px 0px; }
+.icon-btn.fight  { background-position: -96px 0px; }
+.icon-btn.clan   { background-position: -144px 0px; }
+.icon-btn.rating { background-position: -192px 0px; }
+
+
+/* --- Нижняя панель --- */
+.bottombar {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.bottom-btn {
+  width: 64px;
+  height: 64px;
+  border: none;
+  background: rgba(0,0,0,0);
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.bottom-btn:active {
+  transform: scale(0.95);
+  filter: brightness(1.2);
+}
+
+/* Чтобы кнопки совпали по местам на фоне —
+   мы просто кладем их как прозрачные области.
+   При желании можно заменить на картинки позже. */

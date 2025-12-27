@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiniApp UI</title>
+
+  <!-- Telegram WebApp -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="screen">
+
+    <!-- Верхняя панель -->
+    <div class="topbar">
+      <button class="icon-btn shop" data-action="shop"></button>
+      <button class="icon-btn hero" data-action="hero"></button>
+      <button class="icon-btn fight" data-action="fight"></button>
+      <button class="icon-btn clan" data-action="clan"></button>
+      <button class="icon-btn rating" data-action="rating"></button>
+    </div>
+
+    <!-- Нижняя панель -->
+    <div class="bottombar">
+      <button class="bottom-btn market" data-action="market"></button>
+      <button class="bottom-btn person" data-action="person"></button>
+      <button class="bottom-btn battle" data-action="battle"></button>
+      <button class="bottom-btn clan2" data-action="clan2"></button>
+      <button class="bottom-btn leaderboard" data-action="leaderboard"></button>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
